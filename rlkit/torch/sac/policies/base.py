@@ -24,7 +24,6 @@ class TorchStochasticPolicy(
     ExplorationPolicy, metaclass=abc.ABCMeta
 ):
     def get_action(self, obs_np, ):
-        import pudb; pudb.set_trace()
         actions = self.get_actions(obs_np[None])
         return actions[0, :], {}
 

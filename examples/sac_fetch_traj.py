@@ -14,10 +14,8 @@ from rlkit.torch.torch_rl_algorithm import TorchBatchRLAlgorithm
 def experiment(variant):
     expl_env = NormalizedBoxEnv(FetchTrajReachEnv())
     eval_env = NormalizedBoxEnv(FetchTrajReachEnv())
-    obs_dim = 0        
-    for key in expl_env.observation_space.spaces.keys():
-        obs_dim += expl_env.observation_space[key].low.size
-    action_dim = eval_env.action_space.shape[0]
+    obs_dim = expl_env.observation_space.low.size
+    action_dim = eval_env.action_space.low.size
 
     M = variant['layer_size']
     qf1 = ConcatMlp(
