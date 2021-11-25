@@ -1,0 +1,4 @@
+directory: /home/kwonys/code/rlkit/rlkit/..
+git hash: 6485427841c0ce257c89666bb067b6c3d5d2c98d
+git branch name: master
+
